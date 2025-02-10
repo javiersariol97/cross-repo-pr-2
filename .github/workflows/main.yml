@@ -1,0 +1,14 @@
+name: Hola Mundo PR
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    - branches:
+        - staging
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
+      - name: hello World
+        run: |
+          echo "Hola Mundo"
