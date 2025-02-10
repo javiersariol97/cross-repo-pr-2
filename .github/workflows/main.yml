@@ -3,12 +3,14 @@ name: Hola Mundo PR
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    - branches:
-        - staging
+    branches:
+      - staging
 
 jobs:
   hello_world:
     runs-on: ubuntu-latest
-      - name: hello World
+    name: hello World
+    steps:
+      - name: Run Hello World
         run: |
           echo "Hola Mundo"
